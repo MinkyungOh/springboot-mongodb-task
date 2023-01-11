@@ -12,25 +12,27 @@
 
 ### PostMapping
 * http://localhost:8080/tasks
++ body
 ```
-	{
-		"description" : "today's to-do to have to do",
-		"severity": 3,
-		"assignee" : "ominomin",
-		"storyPoint" : 10
-	}
+{
+	"description" : "today's to-do to have to do",
+	"severity": 3,
+	"assignee" : "ominomin",
+	"storyPoint" : 10
+}
 ```
 
 ### PutMapping
 * http://localhost:8080/tasks
++ body
 ```
-	{
-		"taskId": "b7707cec",
-		"description": "today's to-do to have to do",
-		"severity": 6,
-		"assignee": "ominomin",
-		"storyPoint": 15
-	}
+{
+	"taskId": "b7707cec",
+	"description": "today's to-do to have to do",
+	"severity": 6,
+	"assignee": "ominomin",
+	"storyPoint": 15
+}
 ```
 
 ### DeleteMapping
