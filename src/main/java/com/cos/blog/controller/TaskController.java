@@ -9,8 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import com.cos.blog.model.Task;
 import com.cos.blog.service.TaskService;
 
+import lombok.extern.slf4j.Slf4j;
+
+
 @RestController
 @RequestMapping("/tasks")
+@Slf4j
 public class TaskController {
 
 	@Autowired
@@ -24,11 +28,15 @@ public class TaskController {
 	
 	@GetMapping
 	public List<Task> getTasks() {
+		log.info("Get all tasks");
+		//log.error()
+		//log.debug()
 		return service.findAllTasks();
 	}
 	
 	@GetMapping("/{taskId}")
 	public Task getTask(@PathVariable String taskId) {
+		log.info("Get special task");
 		return service.getTaskByTaskId(taskId);
 	}
 	
